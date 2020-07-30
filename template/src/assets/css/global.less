@@ -1,0 +1,79 @@
+/* 垂直（flex） */
+.is-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 定位 */
+.ict-pos--relative {
+    position: relative;
+}
+.ict-pos--absolute {
+    position: absolute;
+}
+.ict-pos--sticky {
+    position: sticky;
+}
+
+/* 对齐 */
+.ict-align--left,
+.ict-align--right,
+.ict-align--top,
+.ict-align--bottom {
+    display: flex;
+}
+/* 左侧对齐 */
+.ict-align--left.is-vertical {
+    align-items: flex-start;
+}
+.ict-align--left:not(.is-vertical) {
+    justify-content: flex-start;
+}
+/* 右侧对齐 */
+.ict-align--right.is-vertical {
+    align-items: flex-end;
+}
+.ict-align--right:not(.is-vertical) {
+    justify-content: flex-end;
+}
+/* 顶部对齐 */
+.ict-align--top.is-vertical {
+    justify-content: flex-start;
+}
+.ict-align--top:not(.is-vertical) {
+    align-items: flex-start;
+}
+/* 底部对齐 */
+.ict-align--bottom.is-vertical {
+    justify-content: flex-end;
+}
+.ict-align--bottom:not(.is-vertical) {
+    align-items: flex-end;
+}
+
+/* 居中 */
+.ict-align-center,
+.ict-align-center--horizontal,
+.ict-align-center--vertical {
+    display: flex;
+}
+/* 水平垂直居中（flex） */
+.ict-align-center {
+    justify-content: center;
+    align-items: center;
+}
+/* 水平居中（flex） */
+.ict-align-center--horizontal.is-vertical {
+    align-items: center;
+}
+.ict-align-center--horizontal:not(.is-vertical) {
+    justify-content: center;
+}
+/* 垂直居中（flex） */
+.ict-align-center--vertical.is-vertical {
+    justify-content: center;
+}
+.ict-align-center--vertical:not(.is-vertical) {
+    align-items: center;
+}
+

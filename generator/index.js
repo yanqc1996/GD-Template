@@ -8,31 +8,37 @@ module.exports = (api, options, rootOptions) => {
       "lint": "vue-cli-service lint"
     },
     "dependencies": {
-      "axios": "^0.19.2",
-      "core-js": "^3.6.4",
-      "echarts": "^4.8.0",
-      "element-ui": "^2.13.0",
-      "query-string": "^6.9.0",
-      "vue": "^2.6.11",
-      "vue-router": "^3.1.6",
-      "vuex": "^3.1.3",
+      "axios": "^0.21.1",
+      "core-js": "^3.8.1",
+      "echarts": "^5.0.0",
+      "element-ui": "^2.14.1",
       "js-cookie": "^2.2.1",
-      "sass": "^1.26.10",
-      "sass-loader": "^9.0.2",
+      "query-string": "^6.13.8",
+      "sass": "^1.32.0",
+      "sass-loader": "^10.1.0",
+      "vue": "^2.6.12",
+      "vue-router": "^3.4.9",
+      "vuex": "^3.6.0"
     },
     "devDependencies": {
-      "@vue/cli-plugin-babel": "^4.3.0",
-      "@vue/cli-plugin-eslint": "^4.3.0",
-      "@vue/cli-service": "^4.3.0",
+      "@vue/cli-plugin-babel": "~4.5.9",
+      "@vue/cli-plugin-eslint": "~4.5.9",
+      "@vue/cli-plugin-router": "~4.5.9",
+      "@vue/cli-plugin-vuex": "~4.5.9",
+      "@vue/cli-service": "~4.5.9",
+      "@vue/eslint-config-prettier": "^6.0.0",
       "babel-eslint": "^10.1.0",
-      "eslint": "^6.7.2",
-      "eslint-plugin-vue": "^6.2.2",
-      "less": "^3.11.1",
-      "less-loader": "^4.1.0",
+      "eslint": "^7.16.0",
+      "eslint-plugin-prettier": "^3.3.0",
+      "eslint-plugin-vue": "^7.4.0",
+      "less": "^4.0.0",
+      "less-loader": "^7.2.1",
+      "lint-staged": "^10.5.3",
       "mockjs": "^1.1.0",
-      "vue-template-compiler": "^2.6.11"
-    }
+      "prettier": "^2.2.1",
+      "vue-template-compiler": "^2.6.12"
+    },
   });
-  // 复制template模版
+  // 复制template模版，生成初始化项目
   api.render('../user');
 };

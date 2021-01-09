@@ -1,29 +1,56 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Router from 'vue-router'
 
-Vue.use(VueRouter)
+// 登录页
+const Login = () => import('@/views/Login');
+// 主页
+const Main = () => import('@/views/Main');
+//注册
+const Register = () => import('@/views/Register')
+Vue.use(Router);
 
-  const routes = [
+const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
+    redirect: '/main'
+}, {
+    path: '/main',
+    component: Main,
+    children: []
+}, {
+    path: '/login',
+    name: 'login',
+    component: Login
+}, {
+    path: '/register',
+    name: 'register',
+    component: Register
+}]
 
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+// 创建router对象
+const router = new Router({
+    routes
 })
 
-export default router
+// 全局前置守卫，用于权限拦截
+// router.beforeEach((to, from, next) => {
+//     let accessPathName = ["login", "register"]; // 不需要登陆就可以直接访问
+//     if (sessionStorage.getItem('token')) {
+//         // 如果已登陆，即可放行
+//         next();
+//     } else if (accessPathName.indexOf(to.name) > -1) {
+//         /**
+//          * 此时是没有登陆的情况，
+//          * 如果访问是不需要登陆就可访问的，直接放行
+//          */
+//         next();
+//     } else {
+//         /**
+//          * 此时是在没有登陆情况下，访问需要登陆之后才能访问的内容，
+//          * 前往登陆
+//          */
+//         next("/login");
+//     }
+// })
+
+export default router;

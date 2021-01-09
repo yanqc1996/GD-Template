@@ -1,0 +1,30 @@
+/**
+* @desc 统一基础样式
+* @author amao
+* @date 2019/10/08
+*/
+html, body, div, ul, li, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select { box-sizing: border-box; margin: 0; padding: 0; }
+html, body, ul, li, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select { color: #000; }
+html, body { height: 100%; }
+body { font-size: 12px MicrosoftYaHei; font-weight: normal; font-stretch: normal; letter-spacing: 0; color: #fff; overflow: hidden; }
+/* 不可选中 */
+body { user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; -moz-user-select: none; }
+/* 去掉ul和li的list-style */
+ul, li { list-style: none; }
+/* 修改浏览器自动填充样式 */
+/* input:-webkit-autofill { box-shadow: 0 0 0px 1000px #0D2D59 inset !important; -webkit-text-fill-color: #fff !important; } */
+canvas { outline: none; }
+
+
+/* 自定义btn样式 */
+.btn { display: flex; flex-shrink: 0; justify-content: center; align-items: center; cursor: pointer; }
+/* 清除浮动 */
+.clearfix::after { display: block; content: '.'; height: 0; clear: both; visibility: hidden; }
+/*相对定位*/
+.relative{ position: relative; }
+/*绝对定位*/
+.absolute{ position: absolute;z-index:1000; }
+/* 粘性定位 */
+.sticky { position: sticky; left: 0; top: 0; z-index: 1999; }
+/* 内容溢出用省略号展示 */
+.ellipis { display: inline-block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }

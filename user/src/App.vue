@@ -3,22 +3,19 @@
         <router-view />
     </div>
 </template>
-<script>
-/**
- * @description 根组件元素
- */
-export default {
-    name: 'App'
-}
-</script>
 
+<script>
+export default {
+    name: "App"
+};
+</script>
 <style>
 #app {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
-    overflow: auto;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
 }
 </style>

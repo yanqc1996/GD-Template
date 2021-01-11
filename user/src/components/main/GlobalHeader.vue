@@ -48,11 +48,4 @@
             color: #333959;
         }
     }
-    #logo{
-        display: inline-block;
-        width: 46px;
-        height:46px;
-        background:url('./../../assets/img/logo.png') no-repeat;
-      background-size: 100% 100%;
-    }
 </style>

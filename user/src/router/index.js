@@ -1,36 +1,40 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import Vue from "vue";
+import Router from "vue-router";
 
 // 登录页
-const Login = () => import('@/views/Login');
+const Login = () => import("@/views/Login");
 // 主页
-const Main = () => import('@/views/Main');
+const Main = () => import("@/views/Main");
 //注册
-const Register = () => import('@/views/Register')
+const Register = () => import("@/views/Register");
 Vue.use(Router);
 
 const routes = [
   {
-    path: '/',
-    redirect: '/main'
-}, {
-    path: '/main',
+    path: "/",
+    redirect: "/main",
+  },
+  {
+    path: "/main",
     component: Main,
-    children: []
-}, {
-    path: '/login',
-    name: 'login',
-    component: Login
-}, {
-    path: '/register',
-    name: 'register',
-    component: Register
-}]
+    children: [],
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: Login,
+  },
+  {
+    path: "/register",
+    name: "register",
+    component: Register,
+  },
+];
 
 // 创建router对象
 const router = new Router({
-    routes
-})
+  routes,
+});
 
 // 全局前置守卫，用于权限拦截
 // router.beforeEach((to, from, next) => {

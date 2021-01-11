@@ -1,7 +1,7 @@
 /**
  * @description 集中状态管理vuex中的getters
- * @author amao
- * @date 2021/1/11
+ * @author dunfee
+ * @date 2019/7/9
  */
 
 module.exports = {

@@ -1,7 +1,8 @@
 /**
  * @description 对axios进行二次封装
- * @author amao
- * @date 2021/1/11
+ * @author dunfee
+ * @date 2019/6/25
+ * @update dunfee (2019/7/8) 修改提示方式
  */
 import axios from 'axios';
 import router from './../router';
@@ -9,7 +10,11 @@ import qs from 'qs';
 import { Message } from 'element-ui';
 
 axios.defaults.timeout = 1200000;
+// axios.defaults.baseURL = 'http://192.168.1.70:9001/';
 axios.defaults.baseURL = 'http://www.zhejiangict.com:19070/';
+// axios.defaults.baseURL = 'http://192.168.1.174:9001/';
+// axios.defaults.baseURL = 'http://192.168.1.215:9001/';
+// // axios.defaults.baseURL = 'api/';
 axios.defaults.withCredentials = true
 
 // let cancel, promiseArr = [];

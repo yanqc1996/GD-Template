@@ -4,6 +4,4 @@
  * @date 2019/7/9
  */
 
-module.exports = {
-
-}
+module.exports = {};

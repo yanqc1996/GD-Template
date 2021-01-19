@@ -5,5 +5,5 @@
  */
 
 module.exports = {
-    test: sessionStorage.getItem("test")
+  test: sessionStorage.getItem("test"),
 };

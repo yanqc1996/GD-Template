@@ -5,8 +5,8 @@
  */
 
 module.exports = {
-    setTest(state, value) {
-        state.test = value;
-        sessionStorage.setItem("test", value);
-    }
+  setTest(state, value) {
+    state.test = value;
+    sessionStorage.setItem("test", value);
+  },
 };

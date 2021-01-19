@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-
+import moduleOne from "./lib/moduleOne";
 // 登录页
 const Login = () => import("@/views/Login");
 // 主页
@@ -17,7 +17,7 @@ const routes = [
   {
     path: "/main",
     component: Main,
-    children: [],
+    children: moduleOne,
   },
   {
     path: "/login",

@@ -5,5 +5,5 @@
  */
 
 module.exports = {
-    getTest: state => state.test
+  getTest: (state) => state.test,
 };

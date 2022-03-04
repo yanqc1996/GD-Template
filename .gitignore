@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+.idea
+/__tests__/coverage
+yarn-error.log
+.rpt2_cache
+yarn-error.log
+.rts2_cache_cjs
+.rts2_cache_es
+.rts2_cache_umd
